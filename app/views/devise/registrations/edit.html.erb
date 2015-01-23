@@ -1,0 +1,55 @@
+<h2>Login Details</h2>
+ 
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+ 
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+ 
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+ 
+  <div class="field">
+    <%= f.label :password, "New password" %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :password_confirmation, "New password confirmation"  %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :current_password %> <i>(to confirm changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+ 
+  <%= f.fields_for :profile do |builder| %>
+    <hr class="sexy_line" />
+ 
+    <h2>Profile Details</h2>
+ 
+    <div class="field">
+      <%= builder.label :name %><br />
+      <%= builder.text_field :name %>
+    </div>
+    <div class="field">
+      <%= builder.label :age %><br />
+      <%= builder.text_field :age %>
+    </div>
+    <div class="field">
+      <%= builder.label :hobbies %><br />
+      <%= builder.text_area :hobbies, :rows => 5  %><br />
+    </div>
+  <% end %>
+ 
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+ 
+<% end %>
+ 
+<%= link_to "Back", :back %>

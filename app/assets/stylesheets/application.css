@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#user-info{
+  text-align: right;
+}
+
+#container{
+  width: 90%;
+  margin: 35px auto;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+div[id^='flash']{
+  width: 90%;
+  margin: 20px auto -20px auto;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 1% 2%;
+}
+
+body{
+  background-color: lightblue;
+}
+
+#flash_notice{
+  background-color: #DEFADE;
+  border-color: #267726;
+  color: #267726;
+}
+
+#flash_alert{
+  background-color: #FFEEBF;
+  border-color: #B87D00;
+  color: #B87D00;
+}
+
+#flash_error{
+  background-color: #FFCCCC;
+  border-color: #8F0000;
+  color: #8F0000;
+}
+
+.sexy_line{
+  border:none;
+  margin: 40px 3px 40px 3px;
+  height: 0;
+  border-top: solid 1px rgba(33,33,33, 0.2);
+  border-bottom: solid 1px rgba(255,255,255, 0.6);
+}
+

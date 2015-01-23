@@ -1,0 +1,4 @@
+This is the code for a tutorial I wrote on how to set up nested attributes in Devise.
+The tutorial also covers how to let a user update parts of their profile without providing a password.
+
+It can be found here: http://hibbard.eu/nested-attributes-and-updating-without-a-password-in-devise/
